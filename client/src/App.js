@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
-
 import logo from "./logo.jpg";
 import "./App.css";
+import { Launches } from "./components/Launches";
 
 const client = new ApolloClient({
   uri: `http://localhost:5000/graphql`
@@ -19,6 +19,7 @@ class App extends Component {
             alt="spacex dark logo"
             style={{ width: 300, display: "block", margin: "auto" }}
           />
+          <Launches />
         </div>
       </ApolloProvider>
     );
