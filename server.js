@@ -4,7 +4,7 @@ const schema = require('./schema');
 
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
 app.use(
 	'/graphql',
@@ -15,5 +15,5 @@ app.use(
 );
 
 app.listen(PORT, () => {
-	console.log(`Server started on ${PORT}`);
+	console.log(`Server started on port ${PORT}`);
 });

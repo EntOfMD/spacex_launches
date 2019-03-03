@@ -1,16 +1,20 @@
 {
 	"name": "spacex_flights",
+	"private": true,
 	"version": "1.0.0",
 	"description": "all the flights made by SpaceX, data from SpaceX api",
 	"main": "server.js",
 	"scripts": {
 		"start": "node server.js",
-		"server": "nodemon server.js"
+		"server": "nodemon server.js",
+		"client": "npm start --prefix client",
+		"dev": "concurrently \"npm run server\" \"npm run client\""
 	},
 	"author": "EntOfMD",
 	"license": "ISC",
 	"dependencies": {
 		"axios": "^0.18.0",
+		"concurrently": "^4.1.0",
 		"express": "^4.16.4",
 		"express-graphql": "^0.7.1",
 		"graphql": "^14.1.1"
